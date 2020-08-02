@@ -1,4 +1,7 @@
+import 'package:alpha_keens/Screens/Drawer/Feedback.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -104,7 +107,12 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacement(
+              context,
+              PageTransition(
+                  child: FeedbackPage(), type: PageTransitionType.rightToLeft));
+        },
         child: Icon(Icons.feedback),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(25.0))),
@@ -154,26 +162,34 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18),
                 ),
                 trailing: Icon(Icons.info),
-                onTap: () {}),
+                onTap: () {
+                  Navigator.of(context).pushNamed("/c");
+                }),
             ListTile(
               title: Text('Notification',
                   style:
                       TextStyle(fontWeight: FontWeight.normal, fontSize: 18)),
               trailing: Icon(Icons.notifications),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed("/d");
+              },
             ),
             ListTile(
                 title: Text('Admin Login',
                     style:
                         TextStyle(fontWeight: FontWeight.normal, fontSize: 18)),
                 trailing: Icon(Icons.lock),
-                onTap: () {}),
+                onTap: () {
+                  launchURL();
+                }),
             ListTile(
               title: Text('Feedback',
                   style:
                       TextStyle(fontWeight: FontWeight.normal, fontSize: 18)),
               trailing: Icon(Icons.feedback),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed("/a");
+              },
             ),
             ListTile(
               title: Text('Developers',
@@ -197,5 +213,14 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+}
+
+launchURL() async {
+  const url = 'https://aai-sih.web.app';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }

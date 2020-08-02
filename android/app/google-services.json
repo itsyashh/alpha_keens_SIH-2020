@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "779033806100",
+    "firebase_url": "https://aai-sih.firebaseio.com",
+    "project_id": "aai-sih",
+    "storage_bucket": "aai-sih.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779033806100:android:7990a897706cf8bb896e01",
+        "android_client_info": {
+          "package_name": "com.example.aai_sih"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779033806100-4id92hgf949f2at7bjuvqcu674h28bif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-hfyI7JpaKGbrutGR2ECEDFNECYJ5vRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779033806100-4id92hgf949f2at7bjuvqcu674h28bif.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779033806100:android:556ad5604c92e9ec896e01",
+        "android_client_info": {
+          "package_name": "com.example.alpha_keens"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779033806100-4id92hgf949f2at7bjuvqcu674h28bif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-hfyI7JpaKGbrutGR2ECEDFNECYJ5vRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779033806100-4id92hgf949f2at7bjuvqcu674h28bif.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

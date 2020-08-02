@@ -1,3 +1,7 @@
+import 'package:alpha_keens/Screens/Drawer/AboutPage.dart';
+import 'package:alpha_keens/Screens/Drawer/DeveloperPage.dart';
+import 'package:alpha_keens/Screens/Drawer/Feedback.dart';
+import 'package:alpha_keens/Screens/Drawer/NotificationPage.dart';
 import 'package:alpha_keens/Screens/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -6,17 +10,21 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: SplashScreen(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: SplashScreen(),
+        routes: <String, WidgetBuilder>{
+          "/a": (BuildContext context) => FeedbackPage(),
+          "/c": (BuildContext context) => AboutPage(),
+          "/d": (BuildContext context) => NotificationPage(),
+          "/e": (BuildContext context) => DeveloperPage(),
+        });
   }
 }
